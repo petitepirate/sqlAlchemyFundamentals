@@ -48,3 +48,7 @@ class Pet(db.Model):
         """Get all pets matching that species."""
 
         return cls.query.filter_by(species=species).all()
+
+    @classmethod
+    def get_all_hungry(cls):
+        return cls.query.filter(get.hunger > 20).all()
