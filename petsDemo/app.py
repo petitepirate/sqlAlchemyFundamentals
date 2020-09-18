@@ -24,8 +24,8 @@ def list_pets():
     return render_template("list.html", pets=pets)
 
 
-@app.route("/", methods=["POST"])
-def create_pet():
+@app.route("/users/new", methods=["POST"])
+def create_user():
     name = request.form["name"]
     species = request.form["species"]
     hunger = request.form["hunger"]
